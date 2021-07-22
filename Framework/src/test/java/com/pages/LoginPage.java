@@ -16,7 +16,9 @@ public  LoginPage(WebDriver driver1)
 
 @FindBy(name="username") WebElement uname;
 
+
 @FindBy(name="password") WebElement pass;
+
 
 @FindBy(css =".btn.btn-small") WebElement loginButton;
 

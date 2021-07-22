@@ -40,7 +40,7 @@ public class BaseClass
 		report = new ExtentReports();
 		report.attachReporter(extent);
 		
-		Reporter.log("System Setting up done", true);
+		Reporter.log("System Set up done", true);
 	
 	}
 	
@@ -51,7 +51,7 @@ public class BaseClass
 		
 		driver = BrowserFactory.StartBrowser(driver, config.getBrowser(), config.getTestURL());
 		
-		Reporter.log("Browser launc is Succesful", true);
+		Reporter.log("Browser launch is Succesful", true);
 
 	}
 
@@ -76,7 +76,7 @@ public class BaseClass
 		}
 		else if (Result.getStatus()==ITestResult.SUCCESS)
 		{
-			logger.pass("Test Failed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.getScreenshot(driver)).build());
+			logger.pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.getScreenshot(driver)).build());
 		}
 		report.flush();
 		

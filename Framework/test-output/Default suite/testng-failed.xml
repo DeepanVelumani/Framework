@@ -5,6 +5,8 @@
     <classes>
       <class name="com.testcases.TC01_LoginCRM">
         <methods>
+          <include name="startUpSuite"/>
+          <include name="tearDowmMethod"/>
           <include name="startUp"/>
           <include name="tearDown"/>
           <include name="loginCRM"/>

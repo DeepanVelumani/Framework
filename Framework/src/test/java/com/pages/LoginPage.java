@@ -1,5 +1,7 @@
 package com.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,15 +27,7 @@ public  LoginPage(WebDriver driver1)
 
 public  void loginApplication(String UsernameApp,String PassApplication)
 {
-	try 
-	{
-		Thread.sleep(3000);
-	} 
-	catch (InterruptedException e)
-	{
-		
-		e.printStackTrace();
-	}
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	
 	uname.sendKeys(UsernameApp);
 	pass.sendKeys(PassApplication);
